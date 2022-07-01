@@ -1,3 +1,5 @@
+#script by rikardoroa
+#just python it!!
 import datetime
 import time
 
