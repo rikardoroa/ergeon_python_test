@@ -5,7 +5,7 @@ import time
 
 
 class calendar_yield:
-
+    #initializing variables
     def __init__(self, current=str, initial=str, primenumbers=[]):
         self.current = current
         self.initial = initial
@@ -13,6 +13,7 @@ class calendar_yield:
 
     def response_time(function):
         def wrapper(self, *args, **kwargs):
+            #decortator  to evaluate the execution time
             start = time.time()
             result = function(self, *args, **kwargs)
             execution = (time.time() - start) * 1000
