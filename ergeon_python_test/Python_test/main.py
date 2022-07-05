@@ -62,14 +62,18 @@ class calendar_yield:
 
     @response_time
     def twins_prime(self, s, f):
+        #looping al numbers between the range
         for num in range(s, f):
             if num > 2:
+                #validating all the numbers that are not primes
                 for i in range(2, num):
                     if (num % i) == 0:
                         break
                 else:
+                    #capturing al prime numbers
                     self.primenumbers.append(num)
         twins = []
+        #creating the tuples with all twin prime numbers
         for index, item in enumerate(self.primenumbers):
             i = self.primenumbers[index]
             j = self.primenumbers[(index + 1) % len(self.primenumbers)]
